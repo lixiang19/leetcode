@@ -1,4 +1,4 @@
-let x = 123
-let pop = x % 10
-x /= 10
-console.log(x, pop)
+let a = 1
+let b = 3
+a = b = 2
+console.log(a, b)
