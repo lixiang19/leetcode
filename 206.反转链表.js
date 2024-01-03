@@ -30,8 +30,6 @@ n4.next = n5
  * @return {ListNode}
  */
 var reverseList = function (head) {
-  // 制造一个个的新节点，然后值和原来的对应，这样可以实现
-  // 先成双向，再删掉一向
   // 只搞一个新节点，不断保存上一个
   let node = new ListNode(0)
   let current = head
