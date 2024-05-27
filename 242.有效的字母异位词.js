@@ -11,7 +11,21 @@
  * @return {boolean}
  */
 var isAnagram = function(s, t) {
-
+  if (s.length!==t.length) {
+    return false
+  }
+  const map ={}
+  s.split('').forEach(letter=>{
+    if (!map[letter]) {
+      map[letter]= 0
+    }
+    map[letter]++
+  })
+  t.split('').forEach(letter=>{
+    if (map[letter]) {
+      map[letter]--
+    }
+  })
+  return Object.values(map).reduce((acc,cur)=>acc+cur,0)===0
 };
 // @lc code=end
-
